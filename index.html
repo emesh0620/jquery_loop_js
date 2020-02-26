@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>loop.jsのサンプル</title>
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/loop.js"></script>
+
+</head>
+<body>
+
+<div id = "next_loop"></div>
+<span id = "next_loop_btm_body">
+    <button id="next_loop_btm">もっと見る</button>
+</span>
+    <button id="cache_clear">キャッシュをクリアする</button>
+
+
+
+<script type="text/javascript">
+$(function() {
+    //loop.jsの本体を呼び出す
+    $('#next_loop_btm').loop_looping({
+        name    : 'loop',
+        url     : 'loop/$.html',
+        allpage : 2,
+    });
+
+    //キャッシュをクリアしたい時に呼び出す
+    $('#cache_clear').loop_looping_clear();
+});
+</script>
+</body>
